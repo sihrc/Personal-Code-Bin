@@ -11,3 +11,19 @@
 *.lai
 *.la
 *.a
+
+# Python Compiled
+*.pyc
+*.pyd
+*.pyx
+
+# Executables
+run
+test
+
+# Android
+*.iml
+*gradle*
+idea/
+
+
