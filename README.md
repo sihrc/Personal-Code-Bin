@@ -1,7 +1,7 @@
 Code-Bin
 ========
 
-Where all lonely code come together. A catch-all for young code that don't belong else where
+A catch-all for young code that don't belong elsewhere, where all lonely code come together
 
 
 ##Contents
