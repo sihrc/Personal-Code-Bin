@@ -7,16 +7,16 @@ Where all lonely code come together. A catch-all for young code that don't belon
 ========
 Contents
 ========
-#Algorithms#
+###Algorithms
   - miscellaneous algorithms implemented
   - 
 
-#Programs#
+###Programs
   - Random utility programs
   - Program ideas that are not yet fully developed 
   - 
   
-#Project-Euler#
+###Project-Euler
   - Status/Progress on project-euler puzzles
   - 
 
