@@ -5,7 +5,14 @@ A catch-all for young code that don't belong elsewhere, where all lonely code co
 
 
 ##Contents
-
+###Machine Learning
+  - Following Andrew Ng lectures on OpenClassroom & Coursera
+  - 
+  
+###Java Card Games
+  - Java Game Development
+  - BlackJack
+  
 ###Algorithms
   - miscellaneous algorithms implemented
   - 
