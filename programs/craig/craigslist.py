@@ -49,16 +49,24 @@ def saveUrls(urls):
 if __name__ == "__main__":
 	session = setup()
 	prevUrls = loadUrls()
-	low = 1000
-	high = 2500
-	mainUrl = "http://sfbay.craigslist.org/search/hhh/sfc?zoomToPosting=&catAbb=hhh&query=&minAsk=%d&maxAsk=%d&bedrooms=&housing_type=&nh=1&excats=40" % (low,high)
+	low = 2000
+	high = 5000
+	mainUrl = "http://sfbay.craigslist.org/search/hhh/sfc?zoomToPosting=&catAbb=hhh&query=&minAsk=%d&maxAsk=%d&bedrooms=2&housing_type=&nh=1&excats=40" % (low,high)
 	urls = getUrls(mainUrl)
 	filtered_urls = filterUrls(prevUrls, urls)
-	for url in filtered_urls:
-		recipient = getRecipient(url)
-		print "sent", recipient
-		headers = "\r\n".join(["from: " + username, "subject: Listing",  "to: " + recipient, "mime-version: 1.0", "content-type: text/html"])
-		content = headers + "\r\n\r\n" + random.choice(body_of_email) % url
-		session.sendmail(username, recipient, content)
-	saveUrls(urls)
-	
+	try:
+		for url in filtered_urls:
+			try:
+				recipient = getRecipient(url)
+			except:
+				print "failed, %s" % recipient
+				pass
+
+			print "sent", recipient
+			headers = "\r\n".join(["from: " + username, "subject: Listing",  "to: " + recipient, "mime-version: 1.0", "content-type: text/html"])
+			content = headers + "\r\n\r\n" + random.choice(body_of_email) % url
+			session.sendmail(username, recipient, content)
+		saveUrls(set(list(urls) + list(filtered_urls) + list(prevUrls)))
+	except:
+		saveUrls(set(list(urls) + list(filtered_urls) + list(prevUrls)))
+		
