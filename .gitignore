@@ -2,6 +2,11 @@
 *.slo
 *.lo
 *.o
+*.csv
+*pyo
+*.zip
+*.npy
+
 
 # Compiled Dynamic libraries
 *.so
