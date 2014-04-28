@@ -3,6 +3,7 @@
 *.lo
 *.o
 *.csv
+*.p
 *pyo
 *.zip
 *.npy
